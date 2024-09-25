@@ -26,7 +26,7 @@ function AddChamberPage() {
     "Oncologist",
     "Gastroenterologist",
     "Pediatrics",
-    "Family medicine",
+    "Medicine",
     "Hematology",
     "Infectious Disease Specialist",
     "Nephrologist",

@@ -40,7 +40,26 @@ function RegisterPage() {
     "Endocrinologist",
     "Cardiologist",
     "Neurologist",
-    // Other categories
+    "Obstetrics and gynaecology",
+    "Oncologist",
+    "Gastroenterologist",
+    "Pediatrics",
+    "Medicine",
+    "Hematology",
+    "Infectious Disease Specialist",
+    "Nephrologist",
+    "Otorhinolaryngology",
+    "Psychiatry",
+    "Allergist",
+    "Emergency medicine",
+    "Internal medicine",
+    "Ophthalmology",
+    "Anesthesiology",
+    "Cardiogeriatrics",
+    "Geriatrics",
+    "Hepatologist",
+    "Pain management",
+    "Radiology",
   ];
 
   const uploadFile = async () => {

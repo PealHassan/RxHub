@@ -19,7 +19,27 @@ function AppointmentSchedulerPage() {
         "Dermatologist",
         "Endocrinologist",
         "Cardiologist",
-        // ... other categories
+        "Neurologist",
+        "Obstetrics and gynaecology",
+        "Oncologist",
+        "Gastroenterologist",
+        "Pediatrics",
+        "Medicine",
+        "Hematology",
+        "Infectious Disease Specialist",
+        "Nephrologist",
+        "Otorhinolaryngology",
+        "Psychiatry",
+        "Allergist",
+        "Emergency medicine",
+        "Internal medicine",
+        "Ophthalmology",
+        "Anesthesiology",
+        "Cardiogeriatrics",
+        "Geriatrics",
+        "Hepatologist",
+        "Pain management",
+        "Radiology",
     ];
     function isCurrentTimeBefore(day, targetTime) {
         const dateStr = new Date(currentDates[day]).toDateString();
@@ -54,9 +74,9 @@ function AppointmentSchedulerPage() {
 
         let appoint = {
             "patientid": user.userid,
-            "contactNo" : user.contactNo,
-            "degrees" : filterRes[index].degrees,
-            "categories" : filterRes[index].categories,
+            "contactNo": user.contactNo,
+            "degrees": filterRes[index].degrees,
+            "categories": filterRes[index].categories,
             "patientAddress": user.address,
             "patientName": user.username,
             "patientAge": age,
@@ -111,7 +131,7 @@ function AppointmentSchedulerPage() {
             const updatedDate = new Date(prevDates[day]);
             updatedDate.setDate(updatedDate.getDate() + increment); // Shift by 7 days
             const today = new Date();
-            if(updatedDate.toDateString() == today.toDateString()) {
+            if (updatedDate.toDateString() == today.toDateString()) {
                 return { ...prevDates, [day]: updatedDate };
             }
             else if (updatedDate >= today || increment > 0) {
@@ -193,7 +213,7 @@ function AppointmentSchedulerPage() {
 
     return (
         <div className="scheduler-container">
-            
+
             <div className="filter-form">
                 <div className="filter-fields">
                     <select
@@ -328,7 +348,7 @@ function AppointmentSchedulerPage() {
                                                                     <div key={`${day}-${slotIndex}`} className="table-cell">
                                                                         {getCounter(filterRes[index].id, new Date(currentDates[day]).toDateString(), `${timeSlot.startTime} - ${timeSlot.endTime}`) === Number(timeSlot.maxPatients) ?
                                                                             <button type="button" className="btn btn-success" disabled>Fix Appoint</button> :
-                                                                            isCurrentTimeBefore(day,timeSlot.endTime) ?
+                                                                            isCurrentTimeBefore(day, timeSlot.endTime) ?
                                                                                 <button type="button" className="btn btn-success" onClick={() => createAppointment(index, day, slotIndex)}>Fix Appoint</button> :
                                                                                 <button type="button" className="btn btn-success" disabled>Fix Appoint</button>
                                                                         }

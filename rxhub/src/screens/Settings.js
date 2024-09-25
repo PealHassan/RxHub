@@ -3,7 +3,32 @@ import axios from 'axios';
 import '../styles/Settings.css';
 import Swal from 'sweetalert2';
 
-const categoryOptions = ['Cardiology', 'Neurology', 'Orthopedics', 'Pediatrics', 'Radiology']; // Array for specializations
+const categoryOptions = [
+    "Dermatologist",
+    "Endocrinologist",
+    "Cardiologist",
+    "Neurologist",
+    "Obstetrics and gynaecology",
+    "Oncologist",
+    "Gastroenterologist",
+    "Pediatrics",
+    "Medicine",
+    "Hematology",
+    "Infectious Disease Specialist",
+    "Nephrologist",
+    "Otorhinolaryngology",
+    "Psychiatry",
+    "Allergist",
+    "Emergency medicine",
+    "Internal medicine",
+    "Ophthalmology",
+    "Anesthesiology",
+    "Cardiogeriatrics",
+    "Geriatrics",
+    "Hepatologist",
+    "Pain management",
+    "Radiology",
+]; // Array for specializations
 
 function SettingsPage() {
     const user = JSON.parse(localStorage.getItem('currentUser'));
