@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from './screens/LoginPage.js';
 import NavBar from './components/NavBar.js';
 import RegisterPage from './screens/RegisterPage.js';
-import LandingPage from './screens/LandingPage.js';
 import HomePage from './screens/HomePage.js';
 import AddChamberPage from './screens/AddChamberPage.js';
 import ViewChamberPage from './screens/ViewChamberPage.js';
@@ -31,7 +30,6 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
           <Route path="/signin" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/home" element={<HomePage />} />
@@ -52,17 +50,6 @@ function App() {
           <Route path="/showAppointments" element={<AdminAppointmentPage/>}/>
           <Route path="/fixAppointment" element={<FixAppointment/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
-          
-
-
-
-
-
-
-
-
-
-
         </Routes>
       </BrowserRouter>
     </div>

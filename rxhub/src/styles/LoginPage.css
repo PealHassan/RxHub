@@ -1,46 +1,106 @@
+/* Apply the background image to the entire page */
+body {
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Outer container holding both sections */
+.outsidelogin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items to the vertical center */
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styling the login container */
 .login-container {
+  width: 30%;
+  height: 40%;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 20px; /* Add margin to keep it away from the edge */
+  position: absolute;
+  right: 150px; /* Position it closer to the right without going too far */
+  bottom: 200px; /* Keeps it slightly above the absolute bottom */
+}
+
+/* Tips container styling for welcome message and tips */
+.tips-container {
+ 
+  color: black;
+  width: 50%;
+  height: 70%;
   
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    width: 500px;
-    margin: auto; /* Center the container horizontally */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the container vertically */
-  }
   
-  .login-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
   
-  .login-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .login-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .login-container button:hover {
-    background-color: #2e2727;
-  }
-  
-  .error {
-    color: red;
-    text-align: center;
-  }
+  padding: 20px;
+  text-align: left;
+  position: absolute;
+  left: 60px; /* Adjust to move the message slightly into the empty space */
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%);
+}
+.login-logo {
+  width: 90%; /* Adjust the size as needed */
+  position: relative;
+  left: 50px; 
+  bottom: 100px;
+}
+
+/* Headings and paragraphs in the tips container */
+.tips-container h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.tips-container p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Additional styles for visual appeal */
+.tips-container .tip-highlight {
+  font-style: italic;
+  font-weight: bold;
+  color: #005f73;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #8EC8DB;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #2e2727;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}

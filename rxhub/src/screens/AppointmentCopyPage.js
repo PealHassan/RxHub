@@ -91,7 +91,7 @@ function AppointmentCopyPage() {
 
                 </div>
                 <hr />
-                <div className="patient-info">
+                <div className="patient-Info">
                     <h3><b style={{color:"black",fontSize : "25px"}}>Patient Information</b></h3>
                     <p><strong>Name</strong>: {appointment.patientName}</p>
                     <p><strong>ID</strong>: {appointment.patientid}</p>

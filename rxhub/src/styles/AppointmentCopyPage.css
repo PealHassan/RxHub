@@ -30,14 +30,14 @@
     margin-bottom: 20px;
 }
 
-.patient-info p {
+.patient-Info p {
     display: flex;
     text-align: left;
     margin: 5px 0;
     align-items: flex-start;
 }
 
-.patient-info p strong {
+.patient-Info p strong {
     width: 150px;
     text-align: left;
 }
