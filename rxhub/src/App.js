@@ -24,6 +24,7 @@ import AdminAppointmentPage from './screens/AdminAppointmentPage.js';
 import FixAppointment from './screens/FixAppointment.js';
 import Dashboard from './screens/Dashboard.js';
 
+
 function App() {
   return (
     <div className="App">
@@ -51,6 +52,8 @@ function App() {
           <Route path="/showAppointments" element={<AdminAppointmentPage/>}/>
           <Route path="/fixAppointment" element={<FixAppointment/>}/>
           <Route path="/dashboard" element={<Dashboard/>}/>
+          
+
 
 
 

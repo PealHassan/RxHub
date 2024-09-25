@@ -45,7 +45,7 @@ function Prescription({ prescription }) {
                     </div>
                 </header>
 
-                <section className="patient-info">
+                <section className='Patient-info'>
                     <div style={{
                         display: "flex",
                         justifyContent: "space-between",

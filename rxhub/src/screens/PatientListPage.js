@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import '../styles/PatientListPage.css';
 import { FaChevronDown, FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Icons for navigation
 import GenPresPage from "./GenPresPage";
+import Chatbot from "../components/Chatbot";
 
 
 function PatientListPage() {
@@ -22,7 +23,16 @@ function PatientListPage() {
     const [filter, setFilter] = useState('all');
     const [expanded, setExpanded] = useState(null);
     const [validPres, setValidPres] = useState(true);
+    const [openChatbot, setOpenChatbot] = useState(false);
 
+
+
+    function turnOnChatbot() {
+        setOpenChatbot(true);
+    }
+    function turnOffChatbot() {
+        setOpenChatbot(false);
+    }
 
     const filteredPrescriptions = filter === 'yours'
         ? oldPres.filter(prescription => prescription.doctorUserId === user.userid)
@@ -190,48 +200,60 @@ function PatientListPage() {
                         />
                         </div>
                         <div className="oldPrescriptionContent">
-                            {/* Filter buttons */}
-                            <div className="oldPrescriptionTopButton">
-                                <button onClick={() => setFilter('all')} className={filter === 'all' ? 'btn btn-success' : 'btn btn-secondary'}>All</button>
-                                <button onClick={() => setFilter('yours')} className={filter === 'yours' ? 'btn btn-success' : 'btn btn-secondary'}>Yours Only</button>
-                            </div>
+                            {openChatbot ? <button type="button" className="btn btn-info" onClick={turnOffChatbot}style={{
+                                width: "100%",
+                                borderRadius: "10px"
+                            }}>Turn Off AI Assistant</button> : <button type="button" className="btn btn-info" onClick={turnOnChatbot}style={{
+                                width: "100%",
+                                borderRadius: "10px"
+                            }}>Turn On AI Assistant</button>}
 
-                            {/* Prescription cards */}
-                            <div className="oldPrescriptionCard">
-                                {filteredPrescriptions.map((prescription, index) => (
-                                    <div key={prescription._id} className="oldPresCard">
-                                        <div className="oldPresCardHeader" onClick={() => toggleExpand(index)}>
-                                            <span><b>Prescription {index + 1}</b></span>
-                                            <span>{expanded === index ? <FaChevronDown style={{ "color": "black" }}></FaChevronDown> : <FaChevronRight style={{ "color": "black" }}></FaChevronRight>}</span>
-                                        </div>
+                            {openChatbot ? <Chatbot
+                                prescriptions={filteredPrescriptions}
+                            ></Chatbot> : <></>}
+                                <div className="oldPrescriptionTopButton">
+                                    <button onClick={() => setFilter('all')} className={filter === 'all' ? 'btn btn-success' : 'btn btn-secondary'}>All</button>
+                                    <button onClick={() => setFilter('yours')} className={filter === 'yours' ? 'btn btn-success' : 'btn btn-secondary'}>Yours Only</button>
+                                </div>
 
-                                        {/* Expand card content */}
-                                        {expanded === index && (
-                                            <div className="card-content">
-                                                <p>
-                                                    <strong>Doctor:</strong> {prescription.doctorName}
-                                                    {prescription.doctorCategories.length > 0 && (
-                                                        <span> ({prescription.doctorCategories.join(', ')})</span>
-                                                    )}
-                                                </p>
-                                                <p><strong>Chamber Address:</strong> {prescription.chamberAddress}</p>
-                                                <p><strong>Date:</strong> {prescription.date}</p>
-                                                <p><strong>Diagnosis:</strong> {prescription.diagnosis}</p>
-                                                <p><strong>Medicines:</strong></p>
-                                                <ol>
-                                                    {prescription.medicines.map((medicine, i) => (
-                                                        <li key={i}>
-                                                            {medicine.name} - {medicine.timing} - {medicine.frequency}
-                                                        </li>
-                                                    ))}
-                                                </ol>
-                                                <p><strong>Advice:</strong> {prescription.advice}</p>
+                                {/* Prescription cards */}
+                                <div className="oldPrescriptionCard">
+                                    {filteredPrescriptions.map((prescription, index) => (
+                                        <div key={prescription._id} className="oldPresCard">
+                                            <div className="oldPresCardHeader" onClick={() => toggleExpand(index)}>
+                                                <span><b>Prescription {index + 1}</b></span>
+                                                <span>{expanded === index ? <FaChevronDown style={{ "color": "black" }}></FaChevronDown> : <FaChevronRight style={{ "color": "black" }}></FaChevronRight>}</span>
                                             </div>
 
-                                        )}
-                                    </div>
-                                ))}
-                            </div>
+                                            {/* Expand card content */}
+                                            {expanded === index && (
+                                                <div className="card-content">
+                                                    <p>
+                                                        <strong>Doctor:</strong> {prescription.doctorName}
+                                                        {prescription.doctorCategories.length > 0 && (
+                                                            <span> ({prescription.doctorCategories.join(', ')})</span>
+                                                        )}
+                                                    </p>
+                                                    <p><strong>Chamber Address:</strong> {prescription.chamberAddress}</p>
+                                                    <p><strong>Date:</strong> {prescription.date}</p>
+                                                    <p><strong>Diagnosis:</strong> {prescription.diagnosis}</p>
+                                                    <p><strong>Medicines:</strong></p>
+                                                    <ol>
+                                                        {prescription.medicines.map((medicine, i) => (
+                                                            <li key={i}>
+                                                                {medicine.name} - {medicine.timing} - {medicine.frequency}
+                                                            </li>
+                                                        ))}
+                                                    </ol>
+                                                    <p><strong>Advice:</strong> {prescription.advice}</p>
+                                                </div>
+
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            
+
                         </div>
 
                     </div>

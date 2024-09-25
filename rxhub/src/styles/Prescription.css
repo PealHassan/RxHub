@@ -110,6 +110,9 @@
 .print-button:hover {
     background-color: #45a049;
 }
+.Patient-info {
+    text-align: left;
+}
 
 @media print {
     body * {
