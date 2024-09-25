@@ -1,0 +1,43 @@
+.container {
+    padding: 20px;
+    
+}
+
+.grid {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* space between cards */
+}
+
+.card {
+    border: 1px solid #8EC8DB;
+    border-radius: 8px;
+    padding: 16px;
+    width: calc(33.333% - 16px); /* 3 cards per row */
+    box-sizing: border-box;
+    background-color: #8EC8DB;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid white;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.info {
+    line-height: 1.5;
+}
+
+.button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}

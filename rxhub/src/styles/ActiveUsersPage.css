@@ -1,0 +1,71 @@
+.active-users-container {
+    
+    padding: 50px;
+    background-color: #fff; /* White background */
+    color: #333;
+  }
+  
+  
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-group label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .filter-group select, .filter-group input {
+    padding: 5px;
+    border: 1px solid #8EC8DB;
+    border-radius: 4px;
+  }
+  
+  .users-table {
+    width: 100%;
+    max-width: 100%; /* Ensures the table does not overflow */
+    border-collapse: collapse;
+    background-color: #fff;
+    color: #333;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+    table-layout: fixed; /* Ensures the table respects its width constraints */
+  }
+  
+  .users-table td, 
+.users-table th {
+  padding: 10px;
+  border: 1px solid #ddd; /* Adds border for better visibility */
+  word-wrap: break-word; /* Breaks long words to prevent overflow */
+}
+  
+  .users-table th {
+    background-color: #8EC8DB;
+    color: white;
+  }
+  
+  .users-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .block-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .block-button:hover {
+    background-color: #ff1a1a;
+  }
+  

@@ -1,0 +1,95 @@
+.scheduler-container {
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .results-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .table-row,
+  .table-header {
+    display: flex;
+    width: 100%;
+  }
+  
+  .table-header {
+    font-weight: bold;
+    border-bottom: 2px solid #000; /* Thicker border for header */
+  }
+  
+  .table-cell {
+    flex: 1; /* Ensures equal width for each cell */
+    padding: 10px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-right: 3px solid #ddd; */
+    border-bottom: 3px solid #ddd; /* Border between columns */
+    flex-direction: column; /* Allows vertical stacking of content */
+  }
+ 
+  
+  .table-header .table-cell {
+    border-bottom: 2px solid #000; /* Border between header cells */
+  }
+  
+  .table-row:last-child .table-cell {
+    border-bottom: none; /* Remove bottom border for the last row */
+  }
+  
+  .table-row .table-cell:last-child {
+    border-right: none; /* Remove right border for the last cell */
+  }
+  
+  .filter-form {
+    margin-bottom: 20px;
+  }
+  
+  .filter-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter-input,
+  .filter-select {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .filter-btn {
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .click-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .patient-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top : 20px;
+    margin-bottom : 20px; 
+    
+  }
+  .patient-info input{
+
+    border: 2px solid #8EC8DB;
+    margin-left : 20px; 
+  }

@@ -1,0 +1,84 @@
+.send-message-page {
+    margin-top: 20px;
+    display: flex;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .left-pane {
+    width: 25%;
+    padding: 40px;
+    background-color: #f4f6f8;
+    border-right: 2px solid #8EC8DB;
+    box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-pane h3 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .category-list {
+    
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #8EC8DB;
+    border-radius: 10px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-list li:hover,
+  .category-list li.active {
+    background-color: #8EC8DB;
+    color: white;
+  }
+  
+  .message-form-container {
+    flex-grow: 1;
+    padding: 40px;
+  }
+  
+  
+  
+  .mail-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8EC8DB;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+ 
+  
+  .send-button:hover {
+    background-color: #6BAAB9;
+  }
+  

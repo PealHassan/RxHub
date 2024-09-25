@@ -1,0 +1,77 @@
+.form-container {
+  border: 10px solid #8EC8DB;
+  /* Light gray border */
+  border-radius: 8px;
+  /* Rounded corners */
+  background-color: #f9f9f9;
+  /* Light background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.form-group {
+  text-align: left;
+  font-size: medium;
+  font-weight: bold;
+}
+
+
+.form-check-input {
+  /* Hide the default checkbox appearance */
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.form-check-input+.form-check-label {
+  position: relative;
+  padding-left: 2rem;
+  /* Space for custom checkbox */
+  cursor: pointer;
+}
+
+.form-check-input+.form-check-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1rem;
+  /* Checkbox size */
+  height: 1rem;
+  /* Checkbox size */
+  border: 1px solid #000;
+  /* Border color */
+  background-color: #fff;
+  /* Default background color */
+  border-radius: 0.25rem;
+  /* Rounded corners */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-check-input:checked+.form-check-label::before {
+  background-color: #000;
+  /* Black background when checked */
+  border-color: #000;
+  /* Black border when checked */
+}
+
+.form-check-input:focus+.form-check-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+  /* Optional: Adds a focus ring */
+}
+
+.form-check-input:checked+.form-check-label::after {
+  content: '';
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  /* Checkmark color */
+  clip-path: polygon(0 0, 100% 100%, 50% 50%);
+}
+
+.form-check-label {
+  font-weight: normal !important;
+}

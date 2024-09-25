@@ -1,0 +1,53 @@
+.chamber-details {
+    border: 5px solid #8EC8DB; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    border-color: black;
+    border-width: 10px;
+    background-color: #f9f9f9; /* Light background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    text-align: left;
+  }
+  .days-container {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+    gap: 15px; /* Space between days */
+  }
+  
+  .day-item {
+    flex: 1 1 150px; /* Flex-grow, flex-shrink, and basis to control size */
+    min-width: 150px; /* Minimum width of each day item */
+    border: 10px solid #8EC8DB; /* Optional border */
+    padding: 10px; /* Padding inside each day item */
+    text-align: center; /* Center text */
+    border-radius: 5px; /* Rounded corners */
+  }
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address {
+    color: black;
+    flex: 1;
+    text-align: left;
+}
+
+.id {
+    color: black;
+    flex: 1;
+    text-align: right;
+    font-size: 20px !important;
+}
+.header-col {
+  margin-left: auto; /* Push the header-col to the right */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end; 
+}
+.btn-items {
+  margin-left: 20px;
+}
+

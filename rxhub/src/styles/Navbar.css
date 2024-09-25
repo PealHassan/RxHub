@@ -1,0 +1,96 @@
+.navbar {
+    border-bottom: 3px solid #8EC8DB;
+    background-color: white; 
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+
+.navbar .dropdown-menu {
+    background-color: white; 
+    border: 1px solid #8EC8DB; 
+}
+
+.dropdown-menu {
+    position: absolute; /* Ensure dropdown is positioned absolutely */
+    top: 100%; /* Places it directly below the button */
+    left: 0;   /* Adjust as needed to control horizontal alignment */
+    z-index: 1000; 
+}
+
+/* Dropdown Menu Items */
+.navbar .dropdown-item {
+    color: black; /* Default text color */
+    padding: 10px 20px; /* Add some padding for spacing */
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover Effect for Dropdown Items */
+.navbar .dropdown-item:hover {
+    background-color: #8EC8DB; /* Background color change on hover */
+    color: white; /* Text color change on hover */
+}
+
+/* Divider Style */
+.navbar .dropdown-divider {
+    border-top: 1px solid #8EC8DB; /* Divider color matching the theme */
+}
+
+/* Active or Selected Dropdown Item */
+.navbar .dropdown-item.active {
+    background-color: #8EC8DB; /* Same background for active item */
+    color: white; /* White text for active item */
+    font-weight: bold; /* Bold text for active item */
+}
+
+
+
+
+
+.navbar .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.1); /* Set toggle button border color */
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* To ensure that the content below the navbar doesn't get hidden behind it */
+body {
+    padding-top: 70px; /* Adjust according to the height of your navbar */
+}
+
+.nav-item {
+    margin-left: 50px;
+}
+
+.navbar-nav {
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* Style for hover */
+.navbar .nav-link:hover {
+    color: #8EC8DB !important;
+}
+
+/* Style for active state */
+.navbar .nav-item.active .nav-link {
+    color: #8EC8DB !important;
+    font-weight: bold;
+}
+
+/* Ensure the text remains bold when clicked and stays in the active state */
+.navbar .nav-item.active {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+

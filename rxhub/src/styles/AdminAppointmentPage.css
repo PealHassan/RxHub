@@ -1,0 +1,54 @@
+.admin-appointment-container {
+    padding: 50px;
+    background-color: white;
+    color: #333;
+  }
+  
+  .filters {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .filter-group {
+    margin-right: 20px;
+  }
+  
+  .filter-group label {
+    margin-right: 10px;
+  }
+  
+  .filter-group input, 
+  .filter-group select {
+    padding: 5px;
+    border: 1px solid #8EC8DB;
+    border-radius: 5px;
+  }
+  
+  .appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+  }
+  
+  .appointment-table th, 
+  .appointment-table td {
+    border: 1px solid #8EC8DB;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .appointment-table th {
+    background-color: #8EC8DB;
+    color: white;
+  }
+  
+  .appointment-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .appointment-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  

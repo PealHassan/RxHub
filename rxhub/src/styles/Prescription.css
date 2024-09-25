@@ -1,0 +1,137 @@
+.prescription-background {
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    min-height: 800px;
+    border: 1px solid #ddd;
+    background-image: url('../assets/presBack.jpg'); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column; 
+}
+
+.prescription-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100px;
+}
+
+.logo {
+    width: 200px; 
+    height: auto; 
+}
+
+.doctor-info {
+    align-self: flex-end; /* Aligns the entire block to the right within a flex container */
+    text-align: right; /* Ensures the text inside aligns to the right */
+    margin-top: 50px;
+    margin-right: 30px;
+    font-size: 1.5em;
+}
+
+.prescription-details {
+    text-align: right;
+}
+
+
+.advice-section {
+    margin-left: 30px;
+    margin-right: 30px;
+} 
+
+.medication-section {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.medication-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.5); /* More transparent background */
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.medication-table th,
+.medication-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.7); /* Lighter and transparent border */
+    font-size: 16px;
+}
+
+.medication-table th {
+    background-color: rgba(240, 251, 252, 0.5); /* Very light transparent blue for header */
+    color: #333;
+    font-weight: bold;
+}
+
+.medication-table td {
+    background-color: rgba(249, 253, 253, 0.4); /* Transparent light background for table cells */
+    color: #333;
+}
+
+.rx-icon {
+    width: 100px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.prescription-footer {
+    display: flex; /* Make it a flex container */
+    justify-content: space-between; /* Align items to the right */
+    margin-bottom: 20px;
+    margin-right: 30px;
+    margin-left : 30px;
+}
+
+.print-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #45a049;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+        -webkit-print-color-adjust: exact; /* For Webkit browsers (Chrome, Safari) */
+        print-color-adjust: exact; /* Standard */
+    }
+
+    .prescription-background, .prescription-background * {
+        visibility: visible;
+    }
+
+    .prescription-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .print-button {
+        display: none; /* Hide the print button itself when printing */
+    }
+}

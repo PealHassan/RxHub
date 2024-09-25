@@ -1,0 +1,167 @@
+.register-Container {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  padding: 100px;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  
+  /* align-items: center; */
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8EC8DB;
+}
+
+.section-header {
+  color: #8EC8DB;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.section {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #8EC8DB;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  
+}
+.form-Container {
+  width: 50%;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #8EC8DB;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  
+}
+.topSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.contact-info, .password-info, .address-info{
+  width: 100%;
+  border: none;
+  
+}
+
+.doctor-form-Container {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #8EC8DB;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox for the section row */
+  justify-content: space-between; /* Space sections evenly */
+  align-items: flex-start; 
+  flex-direction: row;/* Align items at the top */
+}
+.category-info, .degree-info, .file-info {
+  width: 30%;
+  border: none;
+  margin-left: 20px;
+}
+
+
+
+ 
+.section select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.radio-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.radio-group input {
+  margin-right: 10px;
+  width: 40%;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.category-container, 
+.degree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-input-row, 
+.degree-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-select, 
+.degree-input {
+  flex: 1;
+}
+
+.remove-category-btn, 
+.remove-degree-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-category-btn, 
+.add-degree-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.upload-btn {
+  background-color: #2196f3;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.register-btn {
+  margin-top: 20px;
+  background-color: #8EC8DB;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.loader-container {
+  margin-top: 20px;
+}

@@ -1,0 +1,128 @@
+.appointments-container {
+    padding: 50px;
+    background-color: #F3F5F8;
+    margin: 30px 30px 30px 30px;
+    border-radius: 20px;
+    border: 2px solid #b3b8d2;
+}
+
+.appointments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.appointments-header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.filter-dropdown select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-dropdown select:focus {
+    outline: none;
+    border-color: #6c63ff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.appointment-card {
+    min-width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.patient-initial {
+    background-color: #6c63ff;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 30%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-status .status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.status-badge.scheduled {
+    background-color: #ffc107;
+    color: #ffffff;
+}
+
+.status-badge.cancelled {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+.status-badge.failed-to-attend {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.status-badge.attended {
+    background-color: #28a745;
+    color: #ffffff;
+}
+.card-body {
+    justify-content: left;
+    text-align: left;
+}
+
+.card-body h4 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.viewBtn .btn{
+    margin-top: 20px;
+    width: 100%;
+}
+.bothBtn {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
